@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 
-
+//styles the wrapper containing everything
 const StyledPageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ export default class Idea extends Component {
     this.setState({ ideas })
   }
 
-// handles the updated idea function
+// handles the updated idea function within the api
   updateIdea = async (i) => {
     const userId = this.props.match.params.userId
     const updatedIdea = this.state.ideas[i]

@@ -1,5 +1,5 @@
 // requiring express 
-const router = require('express').Router({ mergeParams: true })
+const router = require('express').Router()
 const { User, Idea } = require('../db/model')
 
 // making a promise when you click on the 'new idea' button
@@ -12,6 +12,9 @@ router.post('/', (req, res) => {
     })
     .then((user) => {
       res.send(user)
+    })
+    .catch(error => {
+        console.log(error)
     })
 })
 
