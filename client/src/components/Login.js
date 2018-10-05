@@ -11,6 +11,7 @@ export default class Login extends Component {
     }
   }
 
+  // the users are displayed 
   componentDidMount = async () => {
     const response = await axios.get('/api/users')
     this.setState({ users: response.data })
@@ -33,6 +34,7 @@ export default class Login extends Component {
     this.setState({ users })
   }
 
+  // turns the userName into a link and tells it where to go once you click on it
   render() {
     const usersList = this.state.users.map((user, i) => {
       return (
