@@ -10,7 +10,7 @@ mongoose.connect(
 
 const { User, Idea } = require('./model')
 
-//users ne idea ideas
+//users new idea
 const mars = new Idea({
   title: 'Fly to Mars',
   description: "Earth isn't Red enough. Let's move to a new planet",

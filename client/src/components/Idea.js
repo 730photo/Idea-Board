@@ -94,6 +94,7 @@ export default class Idea extends Component {
 
 // handles the updated idea function within the api
   updateIdea = async (i) => {
+    console.log('updating')
     const userId = this.props.match.params.userId
     const updatedIdea = this.state.ideas[i]
     await axios.put(`/api/users/${userId}/ideas/${updatedIdea._id}`, updatedIdea)
@@ -125,7 +126,7 @@ export default class Idea extends Component {
       <StyledPageWrapper>
         <h1>Idea Board for {this.state.user.userName}</h1>
         <StyledIdeaMenu>
-          <StyledNewIdea onClick={this.handleNew}>New Idea</StyledNewIdea>
+          <StyledNewIdea onClick={this.handleNew}>+</StyledNewIdea>
           <TempItem>Thing to Sort</TempItem>
           <TempItem>Thing to Use Sometimes</TempItem>
         </StyledIdeaMenu>

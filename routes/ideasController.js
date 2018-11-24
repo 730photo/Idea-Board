@@ -1,5 +1,5 @@
 // requiring express 
-const router = require('express').Router()
+const router = require('express').Router({mergeParams: true})
 const { User, Idea } = require('../db/model')
 
 // making a promise when you click on the 'new idea' button
@@ -7,6 +7,7 @@ router.post('/', (req, res) => {
   const newIdea = new Idea()
   User.findById(req.params.userId)
     .then((user) => {
+        console.log('FOUND USER', req.params.userId, user)
       user.ideas.push(newIdea)
       return user.save()
     })
@@ -32,7 +33,7 @@ router.delete('/:id', (req, res) => {
 // making a promise when you click on a user
 
 router.put('/:id', (req, res) => {
-    User.findById(req.params.Userid)
+    User.findById(req.params.userId)
     .then(user => {
         const idea = user.ideas.id(req.params.id)
         const updatedIdea = req.body
@@ -43,6 +44,10 @@ router.put('/:id', (req, res) => {
         if (updatedIdea.description) {
             idea.description = updatedIdea.description
         }
+        return user.save()
+    })
+    .then(user => {
+        res.send(user)
     })
 })
 
