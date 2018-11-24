@@ -2,7 +2,6 @@ const Schema = require('mongoose').Schema
 
 //the title and description of the idea will be a string
 const IdeaSchema = new Schema({
-    title: String,
     description: String
 })
 

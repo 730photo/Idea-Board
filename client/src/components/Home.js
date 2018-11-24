@@ -9,7 +9,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1>WELCOME!</h1>
+        <h1>W E L C O M E</h1>
         <Link to='/login'>Log In</Link>
       </div>
     )
