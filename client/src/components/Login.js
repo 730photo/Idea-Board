@@ -1,12 +1,21 @@
 // importing React, axios, and SharedComponents for style
 import React, { Component } from 'react'
 import axios from 'axios'
-import { StyledLink } from './SharedComponents'
+import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
-// const StyledLink = styled(Link)`
-//   text-decoration: none;
-//   color: rgb(10,10,10);
-// `
+const Styledh1 = styled.div`
+  text-align: center;
+  margin-top: 50px;
+  font-size: 5vw;
+`
+
+const Styledh5 = styled.div`
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2vw;
+`
+
 
 export default class Login extends Component {
   state = {
@@ -53,7 +62,7 @@ export default class Login extends Component {
   render() {
     const usersList = this.state.users.map((user, i) => {
       return (<div key={i}>
-      <StyledLink to={`/users/${user._id}`} key={i}>Name: {user.userName}</StyledLink>
+      <Link to={`/users/${user._id}`} key={i}><Styledh5> Name: {user.userName}</Styledh5> </Link>
       </div>)
     })
 
@@ -61,8 +70,9 @@ export default class Login extends Component {
     // what you need to have when you come to the Login page
     // has the Create New User button
     return (
+      <Styledh5>
       <div>
-        <h1>Login Page</h1>
+        <Styledh1>Login Page</Styledh1>
         {usersList}
         {/* handleSubmit goes in the form tag not submit input */}
         <form onSubmit={this.handleSubmit}>
@@ -74,6 +84,7 @@ export default class Login extends Component {
           <input type='submit' value='Create New User' />
         </form>
       </div>
+      </Styledh5>
     )
   }
 }
