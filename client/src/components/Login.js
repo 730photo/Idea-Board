@@ -2,17 +2,17 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import { StyledLink } from './SharedComponents'
 
 const Styledh1 = styled.div`
   text-align: center;
-  margin-top: 50px;
+  margin-top: 200px;
   font-size: 5vw;
 `
 
 const Styledh5 = styled.div`
   text-align: center;
-  margin-top: 50px;
+  margin-top: 10px;
   font-size: 2vw;
 `
 
@@ -62,7 +62,7 @@ export default class Login extends Component {
   render() {
     const usersList = this.state.users.map((user, i) => {
       return (<div key={i}>
-      <Link to={`/users/${user._id}`} key={i}><Styledh5> Name: {user.userName}</Styledh5> </Link>
+      <StyledLink to={`/users/${user._id}`} key={i}><Styledh5> Name: {user.userName}</Styledh5> </StyledLink>
       </div>)
     })
 
