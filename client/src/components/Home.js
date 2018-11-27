@@ -8,11 +8,11 @@ import { StyledLink } from './SharedComponents'
 import styled from 'styled-components'
 
 
-// const StyledButton = styled.button`
-//     /* width: 50px; */
-//     border-radius: 3px;
-//     margin: auto;
-// `
+const StyledButton = styled.button`
+    /* width: 50px; */
+    border-radius: 3px;
+    margin: auto;
+`
 
 const StyledContainer = styled.div`
     display: flex;
@@ -48,7 +48,9 @@ export default class Home extends Component {
       <div>
         <StyledContainer>
         <Styledh1>WELCOME</Styledh1>
+        <StyledButton>
         <StyledLink to='/login'><Styledh2>Log In</Styledh2></StyledLink>
+        </StyledButton>
         </StyledContainer>
       </div>
     )

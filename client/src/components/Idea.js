@@ -14,7 +14,6 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* font-family: 'Acme', sans-serif; */
 `
 
 const StyledHead = styled.h1`
