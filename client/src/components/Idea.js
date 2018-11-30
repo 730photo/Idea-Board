@@ -4,11 +4,11 @@ import styled from 'styled-components'
 
 const StyledHome = styled.div`
     text-align: center;
-    background-image: url('https://i.imgur.com/MUB7w05.jpg');
+    background-image: url('https://i.imgur.com/aQlR54I.jpg');
     background-size: cover;
     color: blueviolet;
     -webkit-text-stroke: 1px #112F41;
-    padding: 10px 10px;
+    /* padding: 10px 10px; */
     height: 100vh;
 `
 
@@ -84,6 +84,7 @@ class IdeaBoard extends Component {
   handleNew = async () => {
     const userId = this.props.match.params.userId
     const newIdea = await axios.post(`/api/users/${userId}/ideas`)
+    console.log(newIdea)
     await this.getUser()
   }
 
