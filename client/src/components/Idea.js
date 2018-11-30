@@ -8,7 +8,7 @@ const StyledHome = styled.div`
     background-size: cover;
     color: blueviolet;
     -webkit-text-stroke: 1px #112F41;
-    /* padding: 10px 10px; */
+    padding: 10px 10px;
     height: 100vh;
 `
 
