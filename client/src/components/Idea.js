@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
 
+const StyledHome = styled.div`
+    text-align: center;
+    background-image: url('https://i.imgur.com/MUB7w05.jpg');
+    background-size: cover;
+    color: blueviolet;
+    -webkit-text-stroke: 1px #112F41;
+    padding: 10px 10px;
+    height: 100vh;
+`
+
+const Styled = styled.body`
+    font-family: 'Acme', sans-serif;
+`
 
 
 const StyledButton = styled.button`
@@ -114,11 +127,15 @@ class IdeaBoard extends Component {
       )
     })
     return (
+      <Styled>
+        <StyledHome>
       <StyledContainer>
       <StyledHead>{this.state.user.userName}</StyledHead>
         <StyledButton onClick={this.handleNew}>NEW</StyledButton>
         <StyledIdeaContainer>{ideasList}</StyledIdeaContainer>
       </StyledContainer>
+      </StyledHome>
+      </Styled>
       
     )
   }

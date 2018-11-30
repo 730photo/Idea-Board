@@ -4,10 +4,24 @@ import axios from 'axios'
 import styled from 'styled-components'
 import { StyledLink } from './SharedComponents'
 
+const StyledHome = styled.div`
+    text-align: center;
+    background-image: url('https://i.imgur.com/MUB7w05.jpg');
+    background-size: cover;
+    color: blueviolet;
+    -webkit-text-stroke: 1px #112F41;
+    padding: 10px 10px;
+    height: 100vh;
+`
+
+const Styled = styled.body`
+    font-family: 'Acme', sans-serif;
+`
 const Styledh1 = styled.div`
   text-align: center;
-  margin-top: 200px;
+  margin-top: 350px;
   font-size: 5vw;
+  font-family: 'Acme', sans-serif;
 `
 
 const Styledh5 = styled.div`
@@ -61,7 +75,8 @@ export default class Login extends Component {
   // turns the userName into a link and tells it where to go once you click on it
   render() {
     const usersList = this.state.users.map((user, i) => {
-      return (<div key={i}>
+      return (
+      <div key={i}>
       <StyledLink to={`/users/${user._id}`} key={i}><Styledh5> Name: {user.userName}</Styledh5> </StyledLink>
       </div>)
     })
@@ -70,6 +85,8 @@ export default class Login extends Component {
     // what you need to have when you come to the Login page
     // has the Create New User button
     return (
+      <Styled>
+        <StyledHome>
       <Styledh5>
       <div>
         <Styledh1>Login Page</Styledh1>
@@ -85,6 +102,8 @@ export default class Login extends Component {
         </form>
       </div>
       </Styledh5>
+      </StyledHome>
+      </Styled>
     )
   }
 }

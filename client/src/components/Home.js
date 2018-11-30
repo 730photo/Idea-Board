@@ -1,55 +1,87 @@
-// THE HOME PAGE
-// Importing react
-// importing the Link tag
-// importing styled-components
-
 import React, { Component } from 'react'
-import { StyledLink } from './SharedComponents'
+import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
-
-const StyledButton = styled.button`
-    border-radius: 3px;
-    margin: auto;
+const StyledHome = styled.div`
+    text-align: center;
+    background-image: url('https://i.imgur.com/VAvfM8m.jpg');
+    background-size: cover;
+    color: blueviolet;
+    -webkit-text-stroke: 1px #112F41;
+    padding: 10px 10px;
+    height: 80vh;
+`
+const Styled = styled.body`
+    font-family: 'Acme', sans-serif;
+`
+const StyledH1 = styled.h1`
+    text-align: center;
+    margin-top: 150px;
+    font-size: 10vw;
 `
 
 const StyledContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Acme', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: blueviolet;
+  color: white;
+  padding-bottom: 100px;
 `
-
-
-const Styledh1 = styled.div`
+const StyledLink = styled.div`
+  padding-top: 20px;
   text-align: center;
-  font-size: 5vw;
-  padding-top: 20%;
+  background-color: blueviolet;
+  text-decoration: none;
+  border-top: solid 20px #F2B134;
 `
-const Styledh2 = styled.div`
+
+const StyledH3 = styled.h1`
+  color: #4FB99F;
+`
+const Styledli = styled.div`
   text-align: center;
-  font-size: 3vw;
 `
 
-const StyledLists = styled.div`
-  font-family: 'Acme', sans-serif;
-  text-align: center;
+const StyledFooter = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #112F41;
+  height: 30px;
+  padding: 1%;
+  color: white;
+    a {
+      text-decoration: none;
+      color: white;
+    }
 `
 
-
-export default class Home extends Component {
+class Home extends Component {
   render() {
     return (
+      <Styled>
+      <StyledHome>
+        <StyledH1>idea board</StyledH1>
+      </StyledHome>
+      <StyledLink>
+      <Link to='/login'><img src="https://i.imgur.com/cBSXIoX.png" alt="Click here"/></Link>
+      </StyledLink>
+      <StyledContainer>
       <div>
-        <StyledLists>
-        <StyledContainer>
-        <Styledh1>WELCOME</Styledh1>
-        <StyledButton>
-        <StyledLink to='/login'><Styledh2>Log In</Styledh2></StyledLink>
-        </StyledButton>
-        </StyledContainer>
-        </StyledLists>
-      </div>
+        <div>
+        <StyledH3>Create Lists to:</StyledH3>
+          <Styledli>-Get Organized</Styledli>
+          <Styledli>-Be Creative</Styledli>
+          <Styledli>-Have Fun</Styledli>
+        </div>
+        </div>
+      </StyledContainer>
+      <StyledFooter>
+      <a href='https://www.linkedin.com/in/reginald-atl/' alt='linkedin'>Linkedin</a>
+      </StyledFooter>
+      </Styled>
     )
   }
 }
+
+export default Home;
