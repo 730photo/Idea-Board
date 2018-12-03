@@ -9,7 +9,8 @@ const StyledHome = styled.div`
     color: blueviolet;
     -webkit-text-stroke: 1px #112F41;
     padding: 10px 10px;
-    height: 100vh;
+    height: 200vh;
+    /* width: 120vh; */
 `
 
 const Styled = styled.body`
@@ -27,6 +28,7 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* height: 100%; */
 `
 
 const StyledHead = styled.h1`
@@ -128,15 +130,15 @@ class IdeaBoard extends Component {
       )
     })
     return (
+      <StyledContainer>
       <Styled>
         <StyledHome>
-      <StyledContainer>
       <StyledHead>{this.state.user.userName}</StyledHead>
         <StyledButton onClick={this.handleNew}>NEW</StyledButton>
         <StyledIdeaContainer>{ideasList}</StyledIdeaContainer>
-      </StyledContainer>
       </StyledHome>
       </Styled>
+      </StyledContainer>
       
     )
   }
