@@ -6,12 +6,12 @@ import { StyledLink } from './SharedComponents'
 
 const StyledHome = styled.div`
     text-align: center;
-    background-image: url('https://i.imgur.com/MUB7w05.jpg');
+    /* background-image: url('https://i.imgur.com/MUB7w05.jpg'); */
     background-size: cover;
-    color: blueviolet;
+    color: #4FB99F;
     -webkit-text-stroke: 1px #112F41;
     padding: 10px 10px;
-    height: 100vh;
+    height: 60vh;
 `
 
 const Styled = styled.body`
@@ -19,7 +19,7 @@ const Styled = styled.body`
 `
 const Styledh1 = styled.div`
   text-align: center;
-  margin-top: 350px;
+  /* margin-top: 350px; */
   font-size: 5vw;
   font-family: 'Acme', sans-serif;
 `
@@ -29,7 +29,6 @@ const Styledh5 = styled.div`
   margin-top: 10px;
   font-size: 2vw;
 `
-
 
 export default class Login extends Component {
   state = {
@@ -104,6 +103,7 @@ export default class Login extends Component {
       </Styledh5>
       </StyledHome>
       </Styled>
+      
     )
   }
 }

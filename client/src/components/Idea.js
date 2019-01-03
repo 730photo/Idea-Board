@@ -4,9 +4,9 @@ import styled from 'styled-components'
 
 const StyledHome = styled.div`
     text-align: center;
-    background-image: url('https://i.imgur.com/aQlR54I.jpg');
+    /* background-image: url('https://i.imgur.com/aQlR54I.jpg'); */
     background-size: cover;
-    color: blueviolet;
+    color: #4FB99F;;
     -webkit-text-stroke: 1px #112F41;
     padding: 10px 10px;
     height: 200vh;
@@ -52,6 +52,7 @@ const StyledIdea = styled.div`
     margin: 5%;
     padding: 1%;
 `
+
 
 const StyledIdeaDescription = styled.textarea`
     padding: 2%;
