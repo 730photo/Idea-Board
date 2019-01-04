@@ -12,6 +12,8 @@
 
 <h4>
  This is an idea board where you can post all of your ideas. 
+ 
+ <br>
 
 -once a user comes to the site they will be taken to the landing page and once the scroll down 
 they'll see sticky notes(which when clicked on take you to the login page) & below the sticky notes they'll 
