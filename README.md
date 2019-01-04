@@ -1,5 +1,3 @@
-# idea board
-
 <h1>What the idea board looks like:</h1>
 
 ![Game](https://i.imgur.com/5hZ1kHS.png)
@@ -7,6 +5,8 @@
 ![Game](https://i.imgur.com/bSTZjxz.png)
 
 ![Game](https://i.imgur.com/IndmYY3.png)
+
+# idea board
 
 
 
