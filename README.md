@@ -3,11 +3,11 @@
 <h1>What the idea board looks like:</h1>
 
 ![Game](https://i.imgur.com/5hZ1kHS.png)
-
+<br>
 ![Game](https://i.imgur.com/bSTZjxz.png)
-
+<br>
 ![Game](https://i.imgur.com/IndmYY3.png)
-
+<br>
 
 
 This is an idea board where you can post all of your ideas. 
